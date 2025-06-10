@@ -151,7 +151,7 @@ uma [ ~ ]$  az deployment group create --resource-group az104-rg3 --template-fil
 
 ### Deploy a resource by using Azure Bicep
 
-![Azure Bicep](/Users/umasharma/git_workspace/azlabs/governance_compliance/images/BicepTemplates.png)
+![Azure Bicep](./images/BicepTemplates.png)
 ```
 uma [ ~ ]$ az disk list --output table
 Name      ResourceGroup    Location    Zones    Sku           SizeGb    ProvisioningState
