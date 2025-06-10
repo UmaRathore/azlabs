@@ -28,18 +28,26 @@ Resources - https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrat
 - Microsoft Entra ID has user and guest accounts. Each account has a level of access specific to the scope of work expected to be done.
 - Groups combine together related users or devices. There are two types of groups including Security and Microsoft 365.
 Group membership can be statically or dynamically assigned.
-- Microsoft EntraID:
-Identity provider for authentication and user management.
-Cloud-based identity service that manage Users, groups, service principals, MFA, SSO, integrates with Azure and MS 365
-- Azure IAM:
-Azuthorization layer for Azure resource access.
-Refer to RBAC system to authorize users, groups and applications to Azure resources. 
 ```
 ## Lab 02a - Manage Subscriptions and RBAC
 ```
 - The root management group is built into the hierarchy to have all management groups and subscriptions fold up to it. This root management group allows for global policies and Azure role assignments to be applied at the directory level. 
 - After creating a management group, you would add any subscriptions that should be included in the group.
 - As a best practice always assign roles to groups not individuals.
+```
+## Notes
+```
+- OWNER: Full access along with delegating access.
+- CONTRIBUTER: Create and manage resources. Cannot grant access
+- READER: View Azure resources.
+- CUSTOM ROLE:creation requires Microsoft Entra ID P1 & P2. You cant create custom roles in free tier.
+- {company}.{providerName}/{resourceType}/{action}
+- Account Admin: 1 per Azure account. Billing owner of the subscription. No access to azure portal.
+- Service Admin: 1 per Azure subscription. By default account admin is service admin. Service admin has full access to azure portal. Has equivalent access as user who is owner at subscription scope.
+- Co-Admin: 200 per subscription.  Has equivalent access as user who is owner at subscription scope.
+- In hybrid situation where you have AD in on-promise and MS Entra ID in the cloud, password change in cloud must be written back to the on-premise directory. This writeback support support is avalable in Microsoft Entra ID P1 & P2. It is also available with MS 365.
+- Deploy SSPR (Self Service Password Reset) using MS Connect or cloud sync.
+- Azure AD connect is used to integrate on-premise AD with cloud.
 ```
 ### Create a Custom RBAC role
 ```
@@ -85,6 +93,24 @@ Common Roles - Reader, Contributor, Owner, Storage Blob Data Contributor, Custom
 Used to control Access to Microsoft Entra Directory-Level resources like Users, Groups, Applications, Conditional and Enterprise Access
 Common Roles - Global Admin, User Admin, Application Admin, Security Reader.
 ```
+## Notes
+```
+- Microsoft EntraID:
+Identity provider for authentication and user management.
+Cloud-based identity service that manage Users, groups, service principals, MFA, SSO, integrates with Azure and MS 365
+- Azure IAM:
+Azuthorization layer for Azure resource access.
+Refer to RBAC system to authorize users, groups and applications to Azure resources. 
+- Azure Bastion is used to connect to VM without exposing RDP asnd SSH.
+- Ports:
+  Fileshare                     445
+  RDP                           3389
+  HTTP(unsecure traffic)        80
+  HTTPs(secured)                443
+  SMTP (outbound email)         587
+  Mail Traffic                  25
+- Data shared on shared dashboards - 30 days
+```
 
 ## Lab 02b - Manage Governance via Azure Policy
 ```
@@ -104,7 +130,17 @@ Azure policies can ensure operational decisions are enforced across the organiza
 - You can configure a resource lock on a subscription, resource group, or resource. The lock can protect a resource from accidental user deletions and modifications. The lock overrides any user permissions.
 - Azure Policy is pre-deployment security practice. RBAC and resource locks are post-deployment security practice.
 ```
-
+### Notes
+```
+- Child resources do not inherit RG tags.
+- Max 15 tag name/value pairs.  
+- Lock at subscription level are inherited by all RGs, likewise lock on RG is inherited by all resources in the RG.
+- Two types of lock CanNotDelete and ReadOnly
+- Resources are functional during move from one RG to another with lock. Dependent resource cannot be moved without parent resource.
+- Cross tenant moves not supported. 
+- Classic resources cannot be moved. These are referred to the original deployment model without the concept of RGs. RGs were introduced in Azure Resource Manager(ARM). 
+- Move resources using azure CLI.
+```
 ## Lab 03: Manage Azure Resources Using ARM Templates
 ```
 Automate resource deployments using Azure Resource Manager templates and Bicep templates. There are different ways of deploying the templates.
