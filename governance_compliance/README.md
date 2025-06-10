@@ -68,7 +68,7 @@ Refer to RBAC system to authorize users, groups and applications to Azure resour
 }
 ```
 ### Activity Log
-![Activity Logs for Custom Roles][/Users/umasharma/git_workspace/azlabs/governance_compliance/images/activityLog_CustomRoles.png]
+![Activity Logs for Custom Roles](/Users/umasharma/git_workspace/azlabs/governance_compliance/images/activityLog_CustomRoles.png)
 
 ## Key Takeaways
 ```
@@ -91,7 +91,7 @@ Common Roles - Global Admin, User Admin, Application Admin, Security Reader.
 Azure policies can ensure operational decisions are enforced across the organization. Resource tagging improves reporting.
 ```
 
-![Enforce tagging via an Azure Policy][/Users/umasharma/git_workspace/azlabs/governance_compliance/images/storage_tags_via_policy.png]
+![Enforce tagging via an Azure Policy](/Users/umasharma/git_workspace/azlabs/governance_compliance/images/storage_tags_via_policy.png)
 
 ### Key Takeaways
 ```
@@ -111,7 +111,7 @@ Automate resource deployments using Azure Resource Manager templates and Bicep t
 ```
 ### Architecture Diagram
 
-![Deployment Automation][/Users/umasharma/git_workspace/azlabs/governance_compliance/images/Templates_architecture.png]
+![Deployment Automation](/Users/umasharma/git_workspace/azlabs/governance_compliance/images/Templates_architecture.png)
 
 ### Create an Azure Resource Manager template
 
@@ -121,8 +121,8 @@ Automate resource deployments using Azure Resource Manager templates and Bicep t
 - Go to Custom Deployment Blade --> Build your own template in the editor.
 - Edit template blade, click Load file and upload the template.json file you downloaded to the local disk
 - Add az104-disk2 and update parameter.json accordingly. Review and create
-![Templates!][/Users/umasharma/git_workspace/azlabs/governance_compliance/Files/Template.json]
-![Parameters][/Users/umasharma/git_workspace/azlabs/governance_compliance/Files/parameters.json]
+![Templates!](/Users/umasharma/git_workspace/azlabs/governance_compliance/Files/Template.json)
+![Parameters](/Users/umasharma/git_workspace/azlabs/governance_compliance/Files/parameters.json)
 
 ### Configure the Cloud Shell and deploy a template with PowerShell
 ```
@@ -139,7 +139,7 @@ Get-AzDisk -ResourceGroupName $rgName -DiskName $diskName
 
 New-AzResourceGroupDeployment -ResourceGroupName az104-rg3 -TemplateFile template.json -TemplateParameterFile parameters.json
 ```
-![Deploy Resources using Powershell][/Users/umasharma/git_workspace/azlabs/governance_compliance/images/TemplatesUsingPowershell.png]
+![Deploy Resources using Powershell](/Users/umasharma/git_workspace/azlabs/governance_compliance/images/TemplatesUsingPowershell.png)
 
 ### Configure the Cloud Shell and deploy a template with CLI
 ```
@@ -147,11 +147,11 @@ uma [ ~ ]$ ls
 Microsoft  parameters.json  template.json
 uma [ ~ ]$  az deployment group create --resource-group az104-rg3 --template-file template.json --parameters parameters.json
 ```
-![Deploy a template with CLI][/Users/umasharma/git_workspace/azlabs/governance_compliance/images/TemplatesUsingCLI.png]
+![Deploy a template with CLI](/Users/umasharma/git_workspace/azlabs/governance_compliance/images/TemplatesUsingCLI.png)
 
 ### Deploy a resource by using Azure Bicep
 
-![Azure Bicep][/Users/umasharma/git_workspace/azlabs/governance_compliance/images/BicepTemplates.png]
+![Azure Bicep](/Users/umasharma/git_workspace/azlabs/governance_compliance/images/BicepTemplates.png)
 ```
 uma [ ~ ]$ az disk list --output table
 Name      ResourceGroup    Location    Zones    Sku           SizeGb    ProvisioningState
