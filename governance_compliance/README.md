@@ -111,7 +111,7 @@ Automate resource deployments using Azure Resource Manager templates and Bicep t
 ```
 ### Architecture Diagram
 
-/Users/umasharma/git_workspace/azlabs/governance_compliance/images/Templates_architecture.png
+![Deployment Automation][/Users/umasharma/git_workspace/azlabs/governance_compliance/images/Templates_architecture.png]
 
 ### Create an Azure Resource Manager template
 
@@ -121,10 +121,8 @@ Automate resource deployments using Azure Resource Manager templates and Bicep t
 - Go to Custom Deployment Blade --> Build your own template in the editor.
 - Edit template blade, click Load file and upload the template.json file you downloaded to the local disk
 - Add az104-disk2 and update parameter.json accordingly. Review and create
-Template.json
-/Users/umasharma/git_workspace/azlabs/governance_compliance/Files/Template.json
-Parameters.json
-/Users/umasharma/git_workspace/azlabs/governance_compliance/Files/parameters.json
+![Templates!][/Users/umasharma/git_workspace/azlabs/governance_compliance/Files/Template.json]
+![Parameters][/Users/umasharma/git_workspace/azlabs/governance_compliance/Files/parameters.json]
 
 ### Configure the Cloud Shell and deploy a template with PowerShell
 ```
@@ -139,10 +137,9 @@ $diskName = 'az104-disk1'
 New-AzDisk -ResourceGroupName $rgName -DiskName $diskName -Disk $diskConfig 
 Get-AzDisk -ResourceGroupName $rgName -DiskName $diskName
 
-Deploy Resources using Powershell:
 New-AzResourceGroupDeployment -ResourceGroupName az104-rg3 -TemplateFile template.json -TemplateParameterFile parameters.json
 ```
-/Users/umasharma/git_workspace/azlabs/governance_compliance/images/TemplatesUsingPowershell.png
+![Deploy Resources using Powershell][/Users/umasharma/git_workspace/azlabs/governance_compliance/images/TemplatesUsingPowershell.png]
 
 ### Configure the Cloud Shell and deploy a template with CLI
 ```
@@ -150,11 +147,11 @@ uma [ ~ ]$ ls
 Microsoft  parameters.json  template.json
 uma [ ~ ]$  az deployment group create --resource-group az104-rg3 --template-file template.json --parameters parameters.json
 ```
-/Users/umasharma/git_workspace/azlabs/governance_compliance/images/TemplatesUsingCLI.png
+![Deploy a template with CLI][/Users/umasharma/git_workspace/azlabs/governance_compliance/images/TemplatesUsingCLI.png]
 
 ### Deploy a resource by using Azure Bicep
 
-/Users/umasharma/git_workspace/azlabs/governance_compliance/images/BicepTemplates.png
+![Azure Bicep][/Users/umasharma/git_workspace/azlabs/governance_compliance/images/BicepTemplates.png]
 ```
 uma [ ~ ]$ az disk list --output table
 Name      ResourceGroup    Location    Zones    Sku           SizeGb    ProvisioningState
