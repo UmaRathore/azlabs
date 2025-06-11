@@ -16,9 +16,6 @@ Resources - https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrat
 - Role-Based Access Control (RBAC)
 - Management Groups and Subscriptions
 - Resource Locks and Tagging
-- Azure Blueprints
-- Compliance Manager and Regulatory Compliance
-- Monitoring and Reporting
 ```
 ## Lab 01: Manage Microsoft Entra ID Identities
 
