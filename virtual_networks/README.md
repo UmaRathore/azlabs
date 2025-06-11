@@ -45,7 +45,7 @@ This section of the repository provides hands-on labs and resources for learning
 ![Virtual Network in Azure portal](./images/virtual_network.png)
 
 ### Create a virtual network and subnets using a template
-![Parameters file](./Files/parameters.json)
+![Parameters file](virtual_networks/Files/parameters.json)
 ![Templates file](./Files/template.json)
 ![Virtual Network using ARM templates](./images/vnet_using_templates.png)
 
