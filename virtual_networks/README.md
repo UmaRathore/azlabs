@@ -57,5 +57,31 @@ This section of the repository provides hands-on labs and resources for learning
 - Configure an outbound NSG rule that denies Internet access
 ![Outbound Security Rule](./images/outbound_sec_rule.png)
 
+### Notes
+- NSG Limits network traffic to resources in virtual network
+- It list security rules that allow or deny inbound or outbound network traffic. There are deafult security rules which cannot be deleted, but new rules can be added with a higher priority
+- Associated with subnets or NIC. Can be associated multiple times.
+- NSG is applied on NICs or subnets
+- ASG logically group virtual machines - web servers, application servers.
+- ASG is applied only at subnets. It can used as source or destination in NSG
+
 ### Configure public and private Azure DNS zones
 
+- When a new tenant is created, a new default doman is created.
+- A DNS zone host DNS records for a domain.
+- Root/Parent domain is registered at the registrar and pointed to Azure NS
+- When delegating a domain to Azure DNS, you must use the name server names provided by Azure DNS all Four of them.
+
+![DNS Zone](./images/DNSzone.png)
+
+- A Record set is a collection of records in a zone that have the same name and are the same type.
+- 20 records can be added to any record set
+- A Record set cannot contain two identical record
+
+![Recordsets in DNS Zone](./images/DNS_name_resolution.png)
+![Verify delegation of domain name services](./images/DNS_name_resolution.png)
+
+- Use custom domain names. 
+- Provides name resolution for VMs within a VNET and between VNETS
+
+![Private DNS](./images/VnetLinkPrivateDNS.png)
