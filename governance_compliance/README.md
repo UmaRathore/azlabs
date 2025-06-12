@@ -106,6 +106,7 @@ Refer to RBAC system to authorize users, groups and applications to Azure resour
   HTTPs(secured)                443
   SMTP (outbound email)         587
   Mail Traffic                  25
+  SSH                           22
 - Data shared on shared dashboards - 30 days
 ```
 
