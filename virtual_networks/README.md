@@ -78,7 +78,7 @@ This section of the repository provides hands-on labs and resources for learning
 - 20 records can be added to any record set
 - A Record set cannot contain two identical record
 
-![Recordsets in DNS Zone](./images/DNS_name_resolution.png)
+![Recordsets in DNS Zone](./images/Recordset.png)
 ![Verify delegation of domain name services](./images/DNS_name_resolution.png)
 
 - Use custom domain names. 
