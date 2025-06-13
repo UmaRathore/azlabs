@@ -148,3 +148,37 @@ When you associate a custom route table to a subnet, and it contains a route tha
 Here all outbound traffic from Core subnet will be routed to PerimeterCore subnet IP 10.0.1.7 as a firewall. Directs traffic to custom next hops (like firewalls, VPNs, or drop)
 ```
 ![User Defined Route UDR](./images/udr.png)
+
+## Lab 06 - Implement Network Traffic Management
+```
+Azure Load Balancer in front of the two Azure virtual machines in the virtual network. Load Balancers in Azure provide layer 4 connectivity across resources, such as virtual machines. Load Balancer configuration includes a front-end IP address to accept connections, a backend pool, and rules that define how connections should traverse the load balancer.
+```
+![Load Balancer Architecture](./images/Loadbalancer_arch.png)
+
+- Configure an Azure Load Balancer with Frontend IP configuration and backend pool.
+
+![Load Balancer](./images/lb.png)
+
+![Load Balancer Rules](./images/lbrules.png)
+```
+ Verify that the browser window displays the message Hello World from az104-06-vm0 or Hello World from az104-06-vm1.
+```
+![Load Balancer](./images/lb.png)
+
+![Application Gateway](./images/apgw.png)
+
+- Configure an Azure Application Gateway
+```
+implement an Azure Application Gateway in front of two Azure virtual machines. An Application Gateway provides layer 7 load balancing, Web Application Firewall (WAF), SSL termination, and end-to-end encryption to the resources defined in the backend pool. The Application Gateway routes images to one virtual machine and videos to the other virtual machine.
+```
+![Application Gateway](./images/apgw_arch.png)
+
+![Application Gateway](./images/apgw.png)
+
+- In the Path-based routing section, select Add multiple targets to create a path-based rule.
+- In the Application Gateway resource, in the Monitoring section, select Backend health. Ensure both servers in the backend pool display Healthy.
+- Browser window and test this URL /video/*
+
+![Backend Pool Healthy](./images/apgw_bkend_health.png)
+![Path based routing for /image](./images/agw_path_route_image.png)
+![Path based routing for /video](./images/aogw_path_route_video.png)
