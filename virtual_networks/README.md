@@ -11,8 +11,6 @@ This repository provides step-by-step labs, scripts, and resources which helped 
 
 This section of the repository provides hands-on labs and resources for learning about Azure Virtual Networks (VNet), Network Security Groups (NSG), and Domain Name System (DNS) services.
 
-## Overview
-
 - **Virtual Networks (VNet):** Learn how to create and configure VNets to securely connect Azure resources.
 - **Network Security Groups (NSG):** Understand how to control inbound and outbound traffic to Azure resources using NSGs.
 - **DNS:** Explore Azure DNS for hosting your domain names and managing DNS records.
