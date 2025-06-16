@@ -88,6 +88,14 @@ This section of the repository provides hands-on labs and resources for learning
 
 ![Private DNS](./images/VnetLinkPrivateDNS.png)
 
+### Notes
+
+- Add domain name helps you create user names that are familiar to users. azure@tutorialdojo.com. You can verify custom domain by using TXT or MX record types.
+- RRSIG used in domain name security DNSEC to provide cryptographic signatures for DNS records. These signatures validates authenticity of DNS data and not used for ownership verification.
+- SOA provide admin details about domain.
+- A record: map domain name to IP address. EntraID comes with initial domain name <domain>.onmicrosoft.com. 
+- Cant delete, change the initial domain but add org name.
+
 ### Lab 05 - Implement Intersite Connectivity
 ```
 This lab covers communication between virtual networks. You implement virtual network peering and test connections. You will also create a custom route. Connectivity between the segmented areas. This is a common scenario for separating production from development or separating one subsidiary from another.
@@ -104,6 +112,8 @@ This lab covers communication between virtual networks. You implement virtual ne
 ```
 IP FLow: 
 Checks the flow if a packet is allowed or denied by a VM based on 5-tuple information. The security group decision and name of the rule is returned. Specify a target virtual machine with associated network security groups, then run an inbound or outbound packet to see if access is allowed or denied.
+
+5 Tuples: source/destination IP, source/destination Port, Protocol.
 
 NSG Diagnostics:
 The Network Security Group Diagnostics tool provides detailed information to understand and debug the security configuration of your network. For a given source-destination pair, network security group diagnostics returns all network security groups that will be traversed, the rules that will be applied in each network security group, and the final allow/deny status for the flow.

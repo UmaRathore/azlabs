@@ -42,6 +42,20 @@ Data Lake Storage Gen2
 Optimized for big data analytics
 Hierarchical namespace over Blob
 ```
+## Access tiers for blob data
+```
+Hot - An online tier optimized for storing data that is accessed or modified frequently. 
+      Highest storage cost + Lowest access costs.
+
+Cool - An online tier optimized for storing data that is infrequently accessed or modified. Data in the cool tier  should be stored for a minimum of 30 days. 
+       Lower storage costs + higher access costs 
+
+Cold - An online tier optimized for storing data that is rarely accessed or modified, but still requires fast retrieval. Data in the cold tier should be stored for a minimum of 90 days. 
+      Lower storage costs + higher access costs
+
+Archive - An offline tier optimized for storing data that is rarely accessed, and that has flexible latency requirements, on the order of hours. Data in the archive tier should be stored for a minimum of 180 days.
+
+```
 
 ## Access Storage
 ```
@@ -68,3 +82,4 @@ Target - contosoblobs.blob.core.wondows.net
 
 ![Lifecycle of blob](./Images/lifecycle.png)
 
+![Blob Versions for data recovery](./Images/blob_version.png)

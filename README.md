@@ -15,5 +15,14 @@ Key Topics:
   - Configure Azure DNS
 
 - Deploy and manage Azure compute resources
+  - Zone-resilient Azure virtual machines
+  - Storage Scaling for virtual machines
+  - Virtual Machine Scale Sets
+  - Azure PowerShell and CLI
+
 - Implement and manage storage
+  - Storage account
+  - Azure Blob storage
+  - Azure file storage
+
 - Monitor and backup resources
