@@ -2,10 +2,11 @@
 
 ### Governance
 ```
-Advantages of using Bicep over ARM templates
-Simplified syntax: Bicep offers a cleaner and more concise syntax compared to ARM templates, making it easier to write and read.
-Modularization: Bicep supports modularization, allowing you to break down your infrastructure into smaller, reusable modules. This improves code organization and maintainability.
-Transpiles to ARM templates: Bicep code is transpiled into ARM templates at deployment time, ensuring compatibility with existing Azure resources and tools.
+- Advantages of using Bicep over ARM templates
+- Simplified syntax: Bicep offers a cleaner and more concise syntax compared to ARM templates, making it easier to write and read.
+- Modularization: Bicep supports modularization, allowing you to break down your infrastructure into smaller, reusable modules. This improves code organization and maintainability.
+- Transpiles to ARM templates: Bicep code is transpiled into ARM templates at deployment time, ensuring compatibility with existing Azure resources and tools.
+- Azure Policy supports various enforcement modes: Deny to block non-compliant deployments, Audit to log non-compliance, and Append to modify resources to meet compliance standards
 ```
 
 ### VM
@@ -17,6 +18,7 @@ Transpiles to ARM templates: Bicep code is transpiled into ARM templates at depl
 - Proximity placement groups represent a new logical grouping capability for your Azure VM, which in turn used a deployment constraint when selecting where to place VMs.
 - Azure backups support backup of VMs that are shutdown or offline.
 - If you have data in multiple regions create Recovery Service Vault for each region.
+- Azure Arc-enabled servers lets you manage Windows and Linux physical servers and virtual machines hosted outside of Azure, on your corporate network, or other cloud provider
 ```
 ### VNET
 ```
@@ -32,10 +34,17 @@ Transpiles to ARM templates: Bicep code is transpiled into ARM templates at depl
 - Application Gateway - App layer, connect between micro services.
 - LB redirects multiple instances of micro service component to scale the deployment.
 - For overlapping address VNET peering cannot be done.
-- Site-to-site: Uses VPN gateways, public internet by default (IPsec/IKE)
-                For enterprise-grade, high-throughput, low-latency connectivity private connection can be established using Express Route.
-- Point-to-site: Connects individual client devices (e.g., laptops) to Azure. 
-                VPN client software + certificates or Azure AD auth
+- Site-to-site: 
+    - Uses VPN gateways, public internet by default (IPsec/IKE)
+    - For enterprise-grade, high-throughput, low-latency connectivity private connection can be established using Express Route.
+- Point-to-site: 
+    - Connects individual client devices (e.g., laptops) to Azure. 
+    - VPN client software + certificates or Azure AD auth
+- Azure Front Door is Microsoft's advanced cloud Content Delivery Network (CDN) designed to provide fast, reliable, and secure access to your applications' static and dynamic web content globally.
+    - Natively support end-to-end IPv6 connectivity and the HTTP/2 protocol.
+    - Terminate SSL offload at the edge and use integrated certificate management
+    - Front Door’s anycast network and split TCP connections.
+    - 118 edge locations across 100 metro cities connected to Azure using a private enterprise-grade WAN
 
 ```
 ### Storage
