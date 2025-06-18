@@ -127,6 +127,10 @@ Network Watcher VPN Troubleshoot diagnoses the health of the virtual network gat
 Connection Troubleshoot 
 Network Watcher connection troubleshoot provides the capability to check a direct TCP or ICMP connection from a virtual machine (VM), application gateway v2, or Bastion host to a VM, fully qualified domain name (FQDN), URI, or IP address
 ```
+![Bastion](./images/bastion.png)
+
+![Private Only Bastion](./images/private_only_bastion.png)
+
 ### Failed connection tested using Network Watcher
 
 ![Failed Connection](./images/Interconnect_arch.png)

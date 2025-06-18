@@ -7,6 +7,7 @@
 - Modularization: Bicep supports modularization, allowing you to break down your infrastructure into smaller, reusable modules. This improves code organization and maintainability.
 - Transpiles to ARM templates: Bicep code is transpiled into ARM templates at deployment time, ensuring compatibility with existing Azure resources and tools.
 - Azure Policy supports various enforcement modes: Deny to block non-compliant deployments, Audit to log non-compliance, and Append to modify resources to meet compliance standards
+- To implement a CI/CD (Continuous Integration/Continuous Deployment) pipeline for deploying Azure resources using ARM templates or Bicep files use Azure DevOps tools, Azure repos and azure pipelines.
 ```
 
 ### VM
@@ -59,6 +60,7 @@
 - Blob storage access for a given period of time use Shared Access Signature provided by blobs.
 - If Blob data is not accessed for 30 days move data to cool tier and after 90 days move to archieve.
 - SMB over HTTPs for lift and shift thats why fileshare.
+- General-purpose v2 storage accounts are the most versatile and scalable option, making them suitable for a wide range of cloud-native applications that require different types of storage services
 ```
 ### Monitoring
 ```
@@ -66,10 +68,16 @@
 - Metrics third party tools: Azure ITSM and SIEM (Securrity Information and event management). Azure Sentinel can be used as SIEM tool.
 - Azure WAF on App Gateway provides centralised protection of web app from common exploits and vulnerabilities. Web App are increasingly targeted by malacious attacks that exploits commonly known vulnerabilities.
 - Traffic Manager: used for traffic distribution on DNS queries, it is DNS based LB.
+- Azure Application Insights is a feature of Azure Monitor that provides application performance monitoring (APM) for live web applications.
+-  Azure Monitor Agent: Azure service which collect logs and metrics from on-premises applications and send them to existing monitoring system
+- Azure Log Analytics workspace: Each Log Analytics workspace contains multiple tables in which Azure Monitor Logs stores data you collect. For each entra-id is associated with a single Azure Log Analytics workspace.
 ```
 ### Web App
 ```
 - Restrict access to Azure App Service web app to specific IP addresses or virtual networks, onfiguring IP restrictions in the Networking settings of Azure App Service
+- Azure Front Door is a modern cloud Content Delivery Network (CDN) service that provides high performance, scalability, and secure access to your applications and content globally. It combines features of a CDN, global load balancing, dynamic site acceleration, and web application firewall (WAF) into a single, integrated service.
+- Azure access restrictions allow you to control inbound traffic to your Azure resources, such as App Services and Storage Accounts, by specifying which networks, IP addresses, or service tags can access them
+- Azure Bastion offers a range of benefits for secure remote access, including SSL encryption, no public IP requirement for VMs, web-based access, MFA support, and seamless AAD integration
 ```
 ### Load Balancer
 ```
