@@ -8,6 +8,8 @@
 - Transpiles to ARM templates: Bicep code is transpiled into ARM templates at deployment time, ensuring compatibility with existing Azure resources and tools.
 - Azure Policy supports various enforcement modes: Deny to block non-compliant deployments, Audit to log non-compliance, and Append to modify resources to meet compliance standards
 - To implement a CI/CD (Continuous Integration/Continuous Deployment) pipeline for deploying Azure resources using ARM templates or Bicep files use Azure DevOps tools, Azure repos and azure pipelines.
+- Modules in Bicep enable you to organize code into reusable components, improving readability and maintainability while managing dependencies.
+- Azure Policy definitions are written in JSON, allowing you to define custom rules that enforce specific configurations and constraints on Azure resources
 ```
 
 ### VM
@@ -20,6 +22,12 @@
 - Azure backups support backup of VMs that are shutdown or offline.
 - If you have data in multiple regions create Recovery Service Vault for each region.
 - Azure Arc-enabled servers lets you manage Windows and Linux physical servers and virtual machines hosted outside of Azure, on your corporate network, or other cloud provider
+- Incremental backups are ideal for VMs with high churn rates because they only back up the changes since the last backup, reducing storage requirements and backup times.
+- Azure Image Builder and managed images in the Azure Marketplace allow you to create custom VM images with specific software dependencies.
+- VHD (Virtual Hard Disk) in Azure is a file format used to represent virtual machine (VM) disks, including both OS disks and data disks.
+- Single Availability Zone:
+- Single Availability Set
+- Each VM in a separate Availability Set
 ```
 ### VNET
 ```
@@ -61,6 +69,8 @@
 - If Blob data is not accessed for 30 days move data to cool tier and after 90 days move to archieve.
 - SMB over HTTPs for lift and shift thats why fileshare.
 - General-purpose v2 storage accounts are the most versatile and scalable option, making them suitable for a wide range of cloud-native applications that require different types of storage services
+- Blob Storage: Azure Import/Export service
+- File Share: ONLY IMPORT
 ```
 ### Monitoring
 ```
@@ -71,6 +81,12 @@
 - Azure Application Insights is a feature of Azure Monitor that provides application performance monitoring (APM) for live web applications.
 -  Azure Monitor Agent: Azure service which collect logs and metrics from on-premises applications and send them to existing monitoring system
 - Azure Log Analytics workspace: Each Log Analytics workspace contains multiple tables in which Azure Monitor Logs stores data you collect. For each entra-id is associated with a single Azure Log Analytics workspace.
+- Azure Security Center is a security management tool that allows you to gain insight into your security state across hybrid cloud workloads.
+- The Activity Log captures subscription-level events, including create, update, and delete operations. Encompassing a wide range of operations beyond just deployments.
+- Network Watcher provides a comprehensive set of tools for diagnosing and resolving network issues in Azure VMs.
+- Azure Network Watcher Packet Capture is a perfect solution to inspect all network traffic between the Virtual Machines for a duration of 3 hours
+- Azure Application Insights Availability Tests is specifically built for simulating user traffic from different regions and measuring application responsiveness.
+- Network flow logs: collect data about the IP addresses that connects to the Load balancer, enable diagonostics on LB, this will capture network flow logs which contain information about incoming and outgoing traffic on Load Balancer
 ```
 ### Web App
 ```
@@ -78,6 +94,7 @@
 - Azure Front Door is a modern cloud Content Delivery Network (CDN) service that provides high performance, scalability, and secure access to your applications and content globally. It combines features of a CDN, global load balancing, dynamic site acceleration, and web application firewall (WAF) into a single, integrated service.
 - Azure access restrictions allow you to control inbound traffic to your Azure resources, such as App Services and Storage Accounts, by specifying which networks, IP addresses, or service tags can access them
 - Azure Bastion offers a range of benefits for secure remote access, including SSL encryption, no public IP requirement for VMs, web-based access, MFA support, and seamless AAD integration
+- Comprehensive and recommended way to integrate Azure WAF with App Service is through Azure Application Gateway.
 ```
 ### Load Balancer
 ```
