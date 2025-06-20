@@ -25,9 +25,10 @@
 - Incremental backups are ideal for VMs with high churn rates because they only back up the changes since the last backup, reducing storage requirements and backup times.
 - Azure Image Builder and managed images in the Azure Marketplace allow you to create custom VM images with specific software dependencies.
 - VHD (Virtual Hard Disk) in Azure is a file format used to represent virtual machine (VM) disks, including both OS disks and data disks.
-- Single Availability Zone:
-- Single Availability Set
-- Each VM in a separate Availability Set
+- Single Availability Zone: If all VMs are in the same Availability Zone, a single datacenter failure will result in the loss of all three VMs. When virtual machines (VMs) are placed within a single availability zone, there's a high probability they will be located within the same physical data center
+- Single Availability Set: Availability Sets group VMs within the same datacenter for load balancing and fault domain isolation. However, they do not provide protection against datacenter failures.
+- Each VM in a separate Availability Set: This provides some level of fault isolation within a datacenter but does not address the requirement of surviving a datacenter failure.
+- Deploying each VM in a separate Availability Zone provides the highest level of fault tolerance and ensures that your application can continue to function even if one datacenter experiences an outage.
 ```
 ### VNET
 ```
@@ -85,6 +86,7 @@
 - The Activity Log captures subscription-level events, including create, update, and delete operations. Encompassing a wide range of operations beyond just deployments.
 - Network Watcher provides a comprehensive set of tools for diagnosing and resolving network issues in Azure VMs.
 - Azure Network Watcher Packet Capture is a perfect solution to inspect all network traffic between the Virtual Machines for a duration of 3 hours
+- Azure Network Watcher Effective routes: This tool within Azure Network Watcher displays the routing table for a specific virtual machine. It shows the routes that the VM uses to reach different destinations, including on-premises networks.
 - Azure Application Insights Availability Tests is specifically built for simulating user traffic from different regions and measuring application responsiveness.
 - Network flow logs: collect data about the IP addresses that connects to the Load balancer, enable diagonostics on LB, this will capture network flow logs which contain information about incoming and outgoing traffic on Load Balancer
 ```

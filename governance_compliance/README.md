@@ -130,7 +130,7 @@ Azure policies can ensure operational decisions are enforced across the organiza
 ```
 ### Notes
 ```
-- Child resources do not inherit RG tags.
+- Child resources DO NOT inherit Resource Group tags.
 - Max 15 tag name/value pairs.  
 - Lock at subscription level are inherited by all RGs, likewise lock on RG is inherited by all resources in the RG.
 - Two types of lock CanNotDelete and ReadOnly

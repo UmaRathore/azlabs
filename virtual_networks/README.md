@@ -95,6 +95,8 @@ This section of the repository provides hands-on labs and resources for learning
 - SOA provide admin details about domain.
 - A record: map domain name to IP address. EntraID comes with initial domain name <domain>.onmicrosoft.com. 
 - Cant delete, change the initial domain but add org name.
+- MX record: email routing (mail1.yourdomain.com)
+- TXT record: Text info (security, verification)
 
 ### Lab 05 - Implement Intersite Connectivity
 ```
